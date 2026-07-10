@@ -28,8 +28,8 @@ UPSTREAM_BRANCH="main"
 SKILL_MAP="
 grill-me:skills/productivity/grill-me
 grill-with-docs:skills/engineering/grill-with-docs
-to-prd:skills/engineering/to-spec
-to-issues:skills/engineering/to-tickets
+to-spec:skills/engineering/to-spec
+to-tickets:skills/engineering/to-tickets
 implement:skills/engineering/implement
 code-review:skills/engineering/code-review
 "
@@ -260,9 +260,9 @@ echo ""
 echo "  Workflow:"
 echo "    0. /grill-me         — 快速压力测试计划（轻量版）"
 echo "    1. /grill-with-docs  — 深度烤问 + 构建领域模型"
-echo "    2. /to-prd           — 把对话合成一份PRD"
-echo "    3. /to-issues        — 把PRD切成独立issue"
-echo "    4. /implement        — 每个issue实现"
+echo "    2. /to-spec          — 把对话合成一份规范文档(PRD)"
+echo "    3. /to-tickets       — 把规范拆成独立工单"
+echo "    4. /implement        — 每个工单单开会话实现"
 echo "    5. /code-review      — 写完收尾评审"
 echo ""
 echo "  Re-run this script anytime to pick up upstream changes."

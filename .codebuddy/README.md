@@ -54,16 +54,17 @@ install-codebuddy.sh / .ps1 (自动转换)
 
 | 技能名 | 上游来源 | 用途 |
 |--------|----------|------|
-| `/grill-with-docs` | engineering/grill-with-docs | 把想法磨清楚 + 构建领域模型 |
-| `/to-prd` | engineering/to-spec | 把对话合成一份PRD |
-| `/to-issues` | engineering/to-tickets | 把PRD切成独立issue |
-| `/implement` | engineering/implement | 每个issue单开会话实现 |
+| `/grill-me` | productivity/grill-me | 快速压力测试计划（轻量版） |
+| `/grill-with-docs` | engineering/grill-with-docs | 深度烤问 + 构建领域模型 |
+| `/to-spec` | engineering/to-spec | 把对话合成一份规范文档(PRD) |
+| `/to-tickets` | engineering/to-tickets | 把规范拆成独立工单 |
+| `/implement` | engineering/implement | 每个工单单开会话实现 |
 | `/code-review` | engineering/code-review | 双轴代码评审收尾 |
 
 ## 推荐工作流
 
 ```
-/grill-with-docs → /to-prd → /to-issues → /implement (逐个) → /code-review
+/grill-with-docs → /to-spec → /to-tickets → /implement (逐个) → /code-review
 ```
 
 ## 如何追加自定义行为
