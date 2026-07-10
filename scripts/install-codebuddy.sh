@@ -26,6 +26,7 @@ UPSTREAM_BRANCH="main"
 
 # Skill map: "output_name:source_path" pairs
 SKILL_MAP="
+grill-me:skills/productivity/grill-me
 grill-with-docs:skills/engineering/grill-with-docs
 to-prd:skills/engineering/to-spec
 to-issues:skills/engineering/to-tickets
@@ -37,6 +38,9 @@ code-review:skills/engineering/code-review
 # for skills whose body is just "Run a /X session"
 get_shell_skill_refs() {
     case "$1" in
+        "skills/productivity/grill-me")
+            echo "skills/productivity/grilling"
+            ;;
         "skills/engineering/grill-with-docs")
             echo "skills/productivity/grilling skills/engineering/domain-modeling"
             ;;
@@ -254,7 +258,8 @@ done
 step "Done! Skills installed to $SKILLS_DIR"
 echo ""
 echo "  Workflow:"
-echo "    1. /grill-with-docs  — 把想法磨清楚 + 构建领域模型"
+echo "    0. /grill-me         — 快速压力测试计划（轻量版）"
+echo "    1. /grill-with-docs  — 深度烤问 + 构建领域模型"
 echo "    2. /to-prd           — 把对话合成一份PRD"
 echo "    3. /to-issues        — 把PRD切成独立issue"
 echo "    4. /implement        — 每个issue实现"

@@ -40,6 +40,7 @@ $UPSTREAM_BRANCH = "main"
 # Mapping: CodeBuddy skill name => upstream path (relative to repo root)
 # Key = output skill name, Value = source skill directory
 $SKILL_MAP = [ordered]@{
+    "grill-me"        = "skills/productivity/grill-me"
     "grill-with-docs" = "skills/engineering/grill-with-docs"
     "to-prd"          = "skills/engineering/to-spec"
     "to-issues"       = "skills/engineering/to-tickets"
@@ -51,6 +52,7 @@ $SKILL_MAP = [ordered]@{
 # so we need to inline the referenced skill's content.
 # Format: shell-skill-path => referenced-skill-path
 $SHELL_SKILLS = @{
+    "skills/productivity/grill-me"       = @("skills/productivity/grilling")
     "skills/engineering/grill-with-docs" = @("skills/productivity/grilling", "skills/engineering/domain-modeling")
 }
 
@@ -245,7 +247,8 @@ foreach ($entry in $SKILL_MAP.GetEnumerator()) {
 Write-Step "Done! Installed $installed skills to $SkillsDir"
 Write-Host ""
 Write-Host "  Workflow:" -ForegroundColor White
-Write-Host "    1. /grill-with-docs  — 把想法磨清楚 + 构建领域模型"
+Write-Host "    0. /grill-me         — 快速压力测试计划（轻量版）"
+Write-Host "    1. /grill-with-docs  — 深度烤问 + 构建领域模型"
 Write-Host "    2. /to-prd           — 把对话合成一份PRD"
 Write-Host "    3. /to-issues        — 把PRD切成独立issue"
 Write-Host "    4. /implement        — 每个issue实现"
